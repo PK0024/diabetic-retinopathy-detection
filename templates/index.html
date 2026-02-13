@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Retinopathy Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">DR Detection</div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+                <li><a href="{{ url_for('info') }}">Info</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>Early Detection of Diabetic Retinopathy</h1>
+                <p class="subtitle">Using Deep Learning and Transfer Learning Techniques</p>
+                <p class="description">
+                    Diabetic Retinopathy (DR) is a common complication of diabetes mellitus that can lead to blindness 
+                    if not detected early. Our AI-powered system uses advanced deep learning models to classify retinal 
+                    fundus images into 5 severity levels, helping in early detection and treatment.
+                </p>
+                <a href="{{ url_for('predict') }}" class="btn btn-primary">Get Started</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>5-Level Classification</h3>
+                        <p>Classifies images into 5 stages from no DR to proliferative DR</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Transfer Learning</h3>
+                        <p>Uses pre-trained models (Xception, ResNet50, Inception V3) for better accuracy</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Fast & Accurate</h3>
+                        <p>Quick diagnosis with high accuracy to aid early detection</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Easy to Use</h3>
+                        <p>Simple web interface for uploading and analyzing fundus images</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="severity-levels">
+            <div class="container">
+                <h2>Diabetic Retinopathy Severity Levels</h2>
+                <div class="levels-grid">
+                    <div class="level-card">
+                        <div class="level-number">0</div>
+                        <h3>No DR</h3>
+                        <p>No signs of diabetic retinopathy</p>
+                    </div>
+                    <div class="level-card">
+                        <div class="level-number">1</div>
+                        <h3>Mild NPDR</h3>
+                        <p>Mild Non-proliferative Diabetic Retinopathy</p>
+                    </div>
+                    <div class="level-card">
+                        <div class="level-number">2</div>
+                        <h3>Moderate NPDR</h3>
+                        <p>Moderate Non-proliferative Diabetic Retinopathy</p>
+                    </div>
+                    <div class="level-card">
+                        <div class="level-number">3</div>
+                        <h3>Severe NPDR</h3>
+                        <p>Severe Non-proliferative Diabetic Retinopathy</p>
+                    </div>
+                    <div class="level-card">
+                        <div class="level-number">4</div>
+                        <h3>PDR</h3>
+                        <p>Proliferative Diabetic Retinopathy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Diabetic Retinopathy Detection System. Educational purposes only.</p>
+        </div>
+    </footer>
+</body>
+</html>

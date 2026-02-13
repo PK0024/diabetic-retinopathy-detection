@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info - Diabetic Retinopathy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">DR Detection</div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('info') }}" class="active">Info</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <h1>About Diabetic Retinopathy</h1>
+
+            <section class="info-section">
+                <h2>What is Diabetic Retinopathy?</h2>
+                <p>
+                    Diabetic Retinopathy (DR) is a diabetes complication that affects the eyes. It's caused 
+                    by damage to the blood vessels of the light-sensitive tissue at the back of the eye (retina).
+                </p>
+                <p>
+                    At first, diabetic retinopathy may cause no symptoms or only mild vision problems. 
+                    Eventually, it can cause blindness. The condition can develop in anyone who has type 1 
+                    or type 2 diabetes. The longer you have diabetes and the less controlled your blood sugar 
+                    is, the more likely you are to develop this eye complication.
+                </p>
+            </section>
+
+            <section class="info-section">
+                <h2>Severity Levels</h2>
+                <div class="severity-details">
+                    <div class="severity-item">
+                        <h3>Level 0: No Diabetic Retinopathy</h3>
+                        <p>No signs of diabetic retinopathy. The retina appears normal.</p>
+                    </div>
+                    <div class="severity-item">
+                        <h3>Level 1: Mild Non-proliferative DR</h3>
+                        <p>Early stage with microaneurysms (small areas of balloon-like swelling in the retina's tiny blood vessels).</p>
+                    </div>
+                    <div class="severity-item">
+                        <h3>Level 2: Moderate Non-proliferative DR</h3>
+                        <p>Blood vessels that nourish the retina are blocked. More microaneurysms and some hemorrhages.</p>
+                    </div>
+                    <div class="severity-item">
+                        <h3>Level 3: Severe Non-proliferative DR</h3>
+                        <p>More blood vessels are blocked, depriving several areas of the retina of their blood supply.</p>
+                    </div>
+                    <div class="severity-item">
+                        <h3>Level 4: Proliferative DR</h3>
+                        <p>Most advanced stage. New, abnormal blood vessels grow in the retina, which can lead to serious vision problems.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>Symptoms</h2>
+                <ul class="symptoms-list">
+                    <li>Spots or dark strings floating in your vision (floaters)</li>
+                    <li>Blurred vision</li>
+                    <li>Fluctuating vision</li>
+                    <li>Impaired color vision</li>
+                    <li>Dark or empty areas in your vision</li>
+                    <li>Vision loss</li>
+                </ul>
+            </section>
+
+            <section class="info-section">
+                <h2>Prevention</h2>
+                <ul class="prevention-list">
+                    <li>Manage your diabetes by keeping blood sugar levels in target range</li>
+                    <li>Control high blood pressure and cholesterol</li>
+                    <li>Quit smoking if you smoke</li>
+                    <li>Pay attention to vision changes</li>
+                    <li>Have regular eye exams</li>
+                </ul>
+            </section>
+
+            <section class="info-section">
+                <h2>Treatment</h2>
+                <p>
+                    Treatment depends on the type and severity of diabetic retinopathy. Early stages may 
+                    only require monitoring. Advanced stages may require laser treatment, injections, 
+                    or surgery. Early detection and treatment can help prevent vision loss.
+                </p>
+            </section>
+
+            <section class="info-section disclaimer-box">
+                <h2>Important Disclaimer</h2>
+                <p>
+                    <strong>This information is for educational purposes only and is not a substitute 
+                    for professional medical advice, diagnosis, or treatment.</strong> Always seek the 
+                    advice of your physician or other qualified health provider with any questions you 
+                    may have regarding a medical condition.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Diabetic Retinopathy Detection System. Educational purposes only.</p>
+        </div>
+    </footer>
+</body>
+</html>

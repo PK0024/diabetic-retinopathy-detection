@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Diabetic Retinopathy Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">DR Detection</div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('info') }}">Info</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">About</a></li>
+                <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <h1>About This Project</h1>
+
+            <section class="about-section">
+                <h2>Project Overview</h2>
+                <p>
+                    This project uses deep learning and transfer learning techniques to detect and classify 
+                    Diabetic Retinopathy (DR) from retinal fundus images. Diabetic Retinopathy is a common 
+                    complication of diabetes mellitus that can lead to blindness if not detected and treated early.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <h2>Technology Stack</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <h3>Deep Learning</h3>
+                        <p>TensorFlow, Keras</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Transfer Learning Models</h3>
+                        <p>Xception, ResNet50, Inception V3</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Web Framework</h3>
+                        <p>Flask (Python)</p>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Image Processing</h3>
+                        <p>OpenCV, Pillow</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <h2>How It Works</h2>
+                <ol class="how-it-works">
+                    <li>Upload a retinal fundus image through the web interface</li>
+                    <li>The image is preprocessed and normalized</li>
+                    <li>A pre-trained deep learning model analyzes the image</li>
+                    <li>The model classifies the image into one of 5 DR severity levels</li>
+                    <li>Results are displayed with confidence scores</li>
+                </ol>
+            </section>
+
+            <section class="about-section">
+                <h2>Model Accuracy</h2>
+                <p>The model achieves an average accuracy of <strong>76.3%</strong> in classifying 
+                diabetic retinopathy severity levels.</p>
+            </section>
+
+            <section class="about-section">
+                <h2>Purpose</h2>
+                <p>
+                    This project aims to provide a cost-effective and accessible solution for early 
+                    detection of Diabetic Retinopathy, helping to reduce the risk of vision loss 
+                    through prompt identification and treatment.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <h2>Important Note</h2>
+                <p class="disclaimer-text">
+                    <strong>This is an educational project and should not be used as a substitute 
+                    for professional medical diagnosis.</strong> Always consult with qualified 
+                    healthcare professionals for proper diagnosis and treatment of medical conditions.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Diabetic Retinopathy Detection System. Educational purposes only.</p>
+        </div>
+    </footer>
+</body>
+</html>
