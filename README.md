@@ -21,32 +21,62 @@ The main aim of this project is to aid early detection of Diabetic Retinopathy u
 
 ## Installation
 
+### Quick Setup (Recommended)
+
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/PK0024/diabetic-retinopathy-detection.git
 cd diabetic-retinopathy-detection
 ```
 
-2. Install dependencies:
+2. Run the setup script:
 ```bash
-pip install -r requirements.txt
+chmod +x setup.sh
+./setup.sh
 ```
 
-3. Download the dataset from Kaggle and place it in the `data/` directory:
-   - Create folders: `data/train/`, `data/test/`, `data/val/`
-   - Organize images by class (0, 1, 2, 3, 4)
+3. Set up Kaggle API credentials:
+   - Go to [Kaggle Settings](https://www.kaggle.com/settings)
+   - Scroll to "API" section and click "Create New Token"
+   - This downloads `kaggle.json`
+   - Move it to `~/.kaggle/kaggle.json`
+   - Run: `chmod 600 ~/.kaggle/kaggle.json`
 
-4. Train the models:
+4. Download and organize the dataset:
+```bash
+python download_data.py
+```
+
+This will automatically:
+   - Download the dataset from [Kaggle Competition](https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data)
+   - Extract and organize images into train/test/val folders
+   - Split data by DR severity levels (0-4)
+
+### Manual Installation
+
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+pip install kaggle
+```
+
+2. Download dataset manually:
+   - Visit: https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data
+   - Download the dataset files
+   - Extract to `data/raw/` directory
+   - Organize images into: `data/train/0/`, `data/train/1/`, etc. (for classes 0-4)
+
+3. Train the models:
 ```bash
 python train_model.py
 ```
 
-5. Run the Flask application:
+4. Run the Flask application:
 ```bash
 python app.py
 ```
 
-6. Open your browser and navigate to `http://localhost:5000`
+5. Open your browser and navigate to `http://localhost:5000`
 
 ## Project Structure
 
